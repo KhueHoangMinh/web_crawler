@@ -1,0 +1,5 @@
+xpack.security.enabled: false
+
+# Use HTTP protocol only
+xpack.security.transport.ssl.enabled: false
+xpack.security.http.ssl.enabled: false
