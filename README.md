@@ -1,4 +1,4 @@
-# COS40005 - Computing Technology Project A
+# Web - crawler
 
 This is a Django-based application designed to crawl property listings from various real estate wensites and store them in a database. The application uses Selenium to navigate and extract information from web pages and updates the status of processed URLs.
 
@@ -31,8 +31,7 @@ This is a Django-based application designed to crawl property listings from vari
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/hwanginhanoi/COS40005.git
-cd COS40005
+git clone https://github.com/KhueHoangMinh/web_crawler.git
 ```
 
 2. Create and activate a virtual environment:
@@ -60,11 +59,11 @@ python manage.py runserver
 
 6. Run Celery Scheduler
 ```Bash
-celery -A cos40005 beat -l INFO --scheduler django_celery_beat.schedulers:DatabaseScheduler
+celery -A web_crawler beat -l INFO --scheduler django_celery_beat.schedulers:DatabaseScheduler
 ```
 
 7. Run Celery Worker
 ```Bash
-celery -A cos40005 worker -l info
-celery -A cos40005 worker --pool=threads --concurrency=1 --loglevel=info
+celery -A web_crawler worker -l info
+celery -A web_crawler worker --pool=threads --concurrency=1 --loglevel=info
 ```

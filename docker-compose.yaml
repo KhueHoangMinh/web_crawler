@@ -15,7 +15,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin123
-      POSTGRES_DB: cos40005
+      POSTGRES_DB: web_crawler
     ports:
       - "5432:5432"
     volumes:
